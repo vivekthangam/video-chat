@@ -1,7 +1,8 @@
 
 const moongoose = require("mongoose");
 const MONGO_DB_CONFIG = {
-    DB: "mongodb://localhost/meeting-app"
+    DB: 
+    "mongodb+srv://vivek:Vivek_2196@cluster0.o9zfd.mongodb.net/?retryWrites=true&w=majority"
 };
 
 const InitiateMongoServer = async () =>{
