@@ -42,6 +42,6 @@ app.use(
     swaggerUi.serve, 
     swaggerUi.setup(swaggerDocument)
   );
-app.listen(4000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Ready to Go!!!");
 })
