@@ -88,7 +88,7 @@ async function checkMeetingExisits(meetingId, callback) {
             if (!response)
                 callback("Invalid meeting Id");
             else
-                callback(null, true)
+                callback(null, response)
         })
         .catch(
             (error) => {
