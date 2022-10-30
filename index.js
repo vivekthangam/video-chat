@@ -30,6 +30,9 @@ app.use(createLog);
 app.get('/isAlive', (req, res) => {
     res.send("Application isAlive");
 })
+app.get('/', (req, res) => {
+    res.send("Application isAlive");
+})
 
 app.use("/api", require("./app/routes/app.route"));
 
