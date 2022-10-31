@@ -1,15 +1,13 @@
+require('dotenv').config()
+require('dotenv').config({ path: `${__dirname}\\.env.${process.env.NODE_ENV}` });
 
 const moongoose = require("mongoose");
-const MONGO_DB_CONFIG = {
-    DB: 
-    "mongodb+srv://vivek:Vivek_2196@cluster0.o9zfd.mongodb.net/?retryWrites=true&w=majority"
-};
 
 const InitiateMongoServer = async () =>{
     
 moongoose.Promise = global.Promise;
 moongoose
-    .connect(MONGO_DB_CONFIG.DB, {
+    .connect(process.env.MONGO_DB_CONFIG, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
